@@ -2,8 +2,7 @@ import {
     GET_GNOMES,
     GET_GNOMES_SUCCESFULLY,
     GET_GNOMES_ERROR,
-    GET_GNOME_FILTER,
-    GET_GNOME_FILTER_SUCCESFULLY,
+    GET_GNOME_FILTER_NAME,
     GET_GNOME_FILTER_ERROR
      
 } from "../types";
@@ -15,8 +14,8 @@ const initialState= {
     gnomes: [],
     error: null,
     loading: false,
-    gnomecolor: null,
-    gnomesfiltered:[]
+    gnomename: '',
+    
 }
 
 // eslint-disable-next-line import/no-anonymous-default-export
@@ -37,6 +36,8 @@ export default function(state = initialState, action) {
                 loading: false,
                 error: action.payload
             }
+
+        
          
         case GET_GNOMES_SUCCESFULLY: 
              return {
@@ -45,19 +46,18 @@ export default function(state = initialState, action) {
                  error:null,
                  gnomes: action.payload
              }
+       
 
-        case GET_GNOME_FILTER: 
-             return {
-                 ...state,
-                 gnomecolor: action.payload
-             }
 
-        case GET_GNOME_FILTER_SUCCESFULLY:
+        case GET_GNOME_FILTER_NAME:
             return {
                 ...state,
-                gnomesfiltered: state.gnomes.filter(gnome => gnome.hair_color === state.gnomecolor),
-                gnomefiltered:null
+                gnomename : action.payload,
+               
+            
             }
+
+        
 
         default:
             return state;
