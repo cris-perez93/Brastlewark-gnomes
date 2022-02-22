@@ -10,15 +10,18 @@ const ScrollComponent = ({ resultGnomes }) => {
   return (
     
       <ContainerSlider>
-        {resultGnomes.map((item) => (
-          <Link key={item.id}
-            to={{
-              pathname: `/gnome/${item.name}`,
-            }}
-          >
-            <Card item={item} />
-          </Link>
-        ))}
+        
+        {resultGnomes.length > 0 ? (
+          resultGnomes.map((item) => (
+            <Link key={item.id}
+              to={{
+                pathname: `/gnome/${item.name}`,
+              }}
+            >
+              <Card item={item} />
+            </Link>
+          ))
+        ) :  <p>Search not found</p>}
       </ContainerSlider>
    
   );
