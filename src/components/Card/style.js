@@ -1,4 +1,11 @@
 import styled from "styled-components";
+import { keyframes } from "styled-components";
+
+const showCard = keyframes`
+  from {
+		opacity: 0;
+	}
+`;
 
 export const CardComponent = styled.div`
  background-color:#1C1C1C;
@@ -8,6 +15,9 @@ export const CardComponent = styled.div`
  flex-direction: column;
  border-radius: 10px;
  padding: 5px;
+ animation: ${showCard} 0.5s linear;
+
+	
 `
 
 export const Name = styled.p`
