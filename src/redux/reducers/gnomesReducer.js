@@ -3,12 +3,9 @@ import {
     GET_GNOMES_SUCCESFULLY,
     GET_GNOMES_ERROR,
     GET_GNOME_FILTER_NAME,
-    GET_GNOME_FILTER_ERROR
+    
      
 } from "../types";
-
-
-// cada reducer tiene su propio state
 
 const initialState= {
     gnomes: [],

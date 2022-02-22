@@ -1,6 +1,7 @@
 import Card from "../Card/Card";
 import { Link } from "react-router-dom";
 import { ContainerSlider } from "./style";
+import PropTypes from 'prop-types'
 
 const ScrollComponent = ({ resultGnomes }) => {
 
@@ -22,5 +23,9 @@ const ScrollComponent = ({ resultGnomes }) => {
    
   );
 };
+
+ScrollComponent.propTypes = {
+  resultGnomes:PropTypes.array.isRequired,
+}
 
 export default ScrollComponent;

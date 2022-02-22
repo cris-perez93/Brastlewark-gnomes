@@ -1,5 +1,7 @@
 import Button from "@mui/material/Button";
 import { Navigation } from "./style";
+import PropTypes from 'prop-types'
+
 
 const Pagination = ({ currentPage, prevPage, nextPage }) => {
   return (
@@ -15,5 +17,13 @@ const Pagination = ({ currentPage, prevPage, nextPage }) => {
     </Navigation>
   );
 };
+
+Pagination.propTypes = {
+  currentPage:PropTypes.node.isRequired,
+  prevPage:PropTypes.func.isRequired,
+  nextPage:PropTypes.func.isRequired,
+  
+}
+
 
 export default Pagination;

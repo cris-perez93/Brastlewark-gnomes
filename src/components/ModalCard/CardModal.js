@@ -1,6 +1,7 @@
 import { Modal } from "react-responsive-modal";
 import { useNavigate, Link } from "react-router-dom";
 import Button from '@mui/material/Button';
+import PropTypes from 'prop-types'
 import {FriendsCamp,ProfessionsCamp, ContainerCard, Avatar, ContainerInfo, Camp, Heading } from "./style";
 
 const CardModal = ({ gnomeId }) => {
@@ -9,7 +10,7 @@ const CardModal = ({ gnomeId }) => {
   const { friends, name, age, hair_color, height, professions, thumbnail, weight } =
     gnomeId;
 
-  //if (!gnomeId) return <p>Loading...</p>;
+   if(!gnomeId) return <p>Loading...</p>;
 
   return (
     <Modal
@@ -36,9 +37,11 @@ const CardModal = ({ gnomeId }) => {
             <Heading>Professions</Heading>
             <ProfessionsCamp>
               
-              {professions.map((profesion) => (
-                <Button size="small" variant= 'outlined' >{profesion}</Button>
-              ))}
+              {professions.length > 0 ? (
+                professions.map((profesion) => (
+                  <Button key={profesion} size="small" variant= 'outlined' >{profesion}</Button>
+                ))
+              ) :  <p>!I still can't find my profession! </p>}
             </ProfessionsCamp>
           </Camp>
           <Camp>
@@ -60,10 +63,11 @@ const CardModal = ({ gnomeId }) => {
           <Camp>
             <Heading>Friends</Heading>
             <FriendsCamp>
-            {friends.map(friend => (
+            
+            {friends.length > 0 ? (friends.map(friend => (
               <Link key={friend} to = {`/gnome/${friend}`}><Button size="small" variant = 'contained'>{friend}</Button></Link>
             
-            ))}
+            ))) : <p>Ups! no friends found.</p>  }
             </FriendsCamp>
           </Camp>
         </ContainerInfo>
@@ -71,5 +75,9 @@ const CardModal = ({ gnomeId }) => {
     </Modal>
   );
 };
+
+CardModal.propTypes = {
+  gnomeId:PropTypes.object.isRequired,
+}
 
 export default CardModal;
