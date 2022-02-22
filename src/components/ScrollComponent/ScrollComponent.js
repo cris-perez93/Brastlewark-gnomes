@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 import { ContainerSlider } from "./style";
 
 const ScrollComponent = ({ resultGnomes }) => {
+
+  if(!resultGnomes) return <p>Loading...</p>
+
   return (
     
       <ContainerSlider>

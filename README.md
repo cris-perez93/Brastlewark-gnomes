@@ -1,70 +1,46 @@
-# Getting Started with Create React App
+# Brastlewark Api - 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Cristian Pérez(Frontend). 
 
-## Available Scripts
+> **Project** 
 
-In the project directory, you can run:
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+**Objetivos** 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+✅ Task → -Retrieve data from the URL. It is provided as an static json, but assume it might change randomly.
+-Show this data in the most user-friendly way could you thiink. Keep in mind our heroes will be quite busy dealing wth Orcs, so the app has to be really simple and easy to use. At least, it would be good to quickly browse(and even filter) all the individuals and be able to see the details of each one.
 
-### `npm test`
+## Tech
+👌  React<br>
+🧾  React-Router-Dom<br>
+📕  Styled-Components<br>
+📎   Redux-Thunk
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## API/
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+ 📃 
+https://raw.githubusercontent.com/rrafols/mobile_test/master/data.json
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Estructure
+I have followed an atomized structure in order to achieve an architecture
+with small components, using a design pattern separating the logic from the visual component.
+We pass information-state through Redux and document them with PropTypes.<br>
+Dumb Components and Smart Components.<br> 
+(https://medium.com/@thejasonfile/dumb-components-and-smart-components-e7b33a698d43)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Installation
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+npm install # Instalación de todas las dependencias del proyecto
+npm start #  Ejecuta el proyecto.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Deploy en Vercel
+https://mwc-reto.vercel.app/

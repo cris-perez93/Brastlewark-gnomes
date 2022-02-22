@@ -10,6 +10,7 @@ import { Title,ContainerHome, Container } from "./style"
 
 
 
+
 const ViewHome = () => {
 
 // state for pagination.
